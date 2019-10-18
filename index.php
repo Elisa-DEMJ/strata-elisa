@@ -1,9 +1,9 @@
 <?php 
 //afficher les erreurs :
-error_reporting(level: E_ALL);
-ini_set(varname:"display_errors", 1);
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
-require_one: "config.php";
+require_once "config.php";
 ?>
 
 
@@ -112,17 +112,25 @@ require_one: "config.php";
 					<ul class="labeled-icons">
 						<li>
 							<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-							<?php echo "adress." <br />
-							"cp." ".ville"<br />
-							".pays" ?>
+							<?php 
+							// A corriger :
+							// echo "adress." <br />
+							// "cp." ".ville"<br />
+							// ".pays" 
+
+							// Corrigé :
+							echo $adress."<br>
+							".$cp." ".$ville."<br>
+							".$pays;
+							?>
 						</li>
 						<li>
 							<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-							000-000-0000
+							<?php echo $tel; ?>
 						</li>
 						<li>
 							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-							<a href="#">hello@untitled.tld</a>
+							<a href="mailto:<?php echo $envelope; ?>"><?php echo $envelope; ?></a>
 						</li>
 					</ul>
 				</div>
@@ -458,8 +466,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				<li><a href="<?php echo $github; ?>" class="icon brands fa-github"><span class="label">Github</span></a></li>
 				<li><a href="<?php echo $dribbble; ?>" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 				<li><a href="<?php echo $envelope; ?>" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				<li><a href="<?php echo $instagram; ?>" class="icon solid fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="<?php echo $facebook; ?>" class="icon solid fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="<?php echo $instagram; ?>" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="<?php echo $facebook; ?>" class="icon brands fa-facebook"><span class="label">Facebook</span></a></li>
 			</ul>
 			<ul class="copyright">
 				<li>&copy; Untitled</li>
