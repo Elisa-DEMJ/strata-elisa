@@ -1,10 +1,9 @@
 <?php 
 //afficher les erreurs :
 error_reporting(level: E_ALL);
-ini_set(varname:“display_errors”, 1);
+ini_set(varname:"display_errors", 1);
 
 require_one: "config.php";
-
 ?>
 
 
@@ -114,8 +113,8 @@ require_one: "config.php";
 						<li>
 							<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
 							<?php echo "adress." <br />
-										"cp." ".ville"<br />
-										".pays" ?>
+							"cp." ".ville"<br />
+							".pays" ?>
 						</li>
 						<li>
 							<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
